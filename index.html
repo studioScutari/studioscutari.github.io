@@ -3,32 +3,223 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bosphorus Arcade - Support</title>
-<style>
-  :root { --ink:#0e4153; --soft:#21718b; --bg:#f4f9fb; --card:#ffffff; --line:#d5e6ec; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:28px; }
-  h1 { margin:0 0 12px; font-size:28px; }
-  h2 { margin:24px 0 8px; font-size:20px; color:var(--soft); }
-  a { color:var(--soft); }
-</style>
+<title>Studio Scutari</title>
+<meta name="description" content="Studio Scutari - an independent game studio on the shores of the Bosphorus. Home of Bosphorus Arcade.">
+<meta name="theme-color" content="#0b2a3a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%2312384c'/%3E%3Cpath fill='%23e2b85a' d='M18 9.5 20 6.5 22 9.5Z M17 13a3 3 0 0 1 6 0v1h-6Z'/%3E%3Crect fill='%23e2b85a' x='17.5' y='14' width='5' height='10'/%3E%3Crect fill='%23e2b85a' x='13' y='22' width='14' height='5'/%3E%3Cpath fill='%23e2b85a' d='M10 28.5q10-3 20 0v1.5H10Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Studio Scutari home">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#12384c" stroke="#e2b85a" stroke-width="1.4"/>
+        <path fill="#e2b85a" d="M18 9.5 20 6.5 22 9.5Z M17 13a3 3 0 0 1 6 0v1h-6Z"/>
+        <rect fill="#e2b85a" x="17.5" y="14" width="5" height="10"/>
+        <rect fill="#e2b85a" x="13" y="22" width="14" height="5"/>
+        <path fill="#e2b85a" d="M10 28.5q10-3 20 0v1.5H10Z"/>
+        <path fill="none" stroke="#e2b85a" stroke-width="1.4" stroke-linecap="round" d="M9 32.6q2.75-1.6 5.5 0t5.5 0 5.5 0 5.5 0"/>
+      </svg>
+      <span class="brand-name">Studio <span>Scutari</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#games" class="hide-sm">Games</a>
+      <a href="#support">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-<div class="card">
-<h1>Bosphorus Arcade</h1>
-<p>An arcade sailing adventure on the waters of the Bosphorus - sink pirates, help sailors in trouble,
-upgrade your ship and build your fleet.</p>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <span class="eyebrow">Independent game studio &middot; Istanbul</span>
+      <h1 id="hero-title">Small games,<br>crafted on the <em>Bosphorus</em>.</h1>
+      <p class="lead">Studio Scutari makes colourful, easy-to-pick-up games for iPhone and iPad &mdash; inspired by the
+        ships, the light and the stories of the strait between two continents.</p>
+      <a class="btn btn-gold" href="#games">Meet our first game</a>
+      <a class="btn btn-ghost" href="#support">Get in touch</a>
+    </div>
 
-<h2>Support</h2>
-<p>Found a bug, have a question or an idea? Write to us at
-<a href="mailto:bilalemregirit@gmail.com">bilalemregirit@gmail.com</a> - we read every message.
-Please include your device model and iOS version if you are reporting a problem.</p>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice">
+        <!-- sun -->
+        <circle cx="1170" cy="96" r="120" fill="#f3d27a" opacity=".10"/>
+        <circle cx="1170" cy="96" r="44" fill="#f3d27a" opacity=".9"/>
+        <!-- skyline -->
+        <g fill="#1d5873" opacity=".75">
+          <path d="M0 232C120 210 260 204 420 214C560 222 640 214 780 228V300H0Z"/>
+          <path d="M150 214a50 40 0 0 1 100 0Z"/><path d="M128 216a22 18 0 0 1 44 0Z"/><path d="M228 216a22 18 0 0 1 44 0Z"/>
+          <rect x="196" y="160" width="8" height="16"/><path d="M196 160h8l-4-6Z"/>
+          <rect x="112" y="140" width="7" height="76"/><path d="M112 140 115.5 116 119 140Z"/>
+          <rect x="281" y="140" width="7" height="76"/><path d="M281 140 284.5 116 288 140Z"/>
+          <path d="M470 222a40 32 0 0 1 80 0Z"/>
+          <rect x="452" y="160" width="6" height="62"/><path d="M452 160 455 140 458 160Z"/>
+          <rect x="562" y="160" width="6" height="62"/><path d="M562 160 565 140 568 160Z"/>
+          <rect x="640" y="176" width="20" height="50"/><path d="M638 176h24l-12-22Z"/>
+        </g>
+        <!-- far waves -->
+        <path fill="#22708c" d="M0 240C120 228 240 252 360 240S600 228 720 240 960 252 1080 240 1320 228 1440 240V300H0Z"/>
+        <!-- ship -->
+        <g>
+          <path fill="#5b3a20" d="M262 246h134l-15 17H278Z"/>
+          <path fill="#7a5130" d="M262 246h134l-3 4H265Z"/>
+          <path stroke="#3a2614" stroke-width="3" d="M322 247V170M354 247V184"/>
+          <path fill="#fbf6ea" d="M323 238V178c32 15 36 42 0 60Z"/>
+          <path fill="#fbf6ea" d="M355 238v-48c25 12 28 33 0 48Z"/>
+          <path fill="#f1e6cf" d="M396 246 370 206 360 240Z"/>
+          <path fill="#d8483b" d="M322 170l14 4-14 4Z"/>
+        </g>
+        <!-- Maiden's Tower -->
+        <g>
+          <path fill="#0f3a4f" d="M926 240c22-18 124-18 148 0Z"/>
+          <rect x="956" y="206" width="88" height="28" fill="#f1e6cf"/>
+          <rect x="952" y="201" width="96" height="6" rx="2" fill="#c89b3c"/>
+          <g fill="#164a63"><rect x="966" y="214" width="8" height="11" rx="4"/><rect x="1026" y="214" width="8" height="11" rx="4"/></g>
+          <rect x="987" y="150" width="26" height="56" fill="#f6eddb"/>
+          <rect x="983" y="146" width="34" height="6" rx="2" fill="#c89b3c"/>
+          <rect x="991" y="124" width="18" height="22" fill="#f6eddb"/>
+          <path fill="#c89b3c" d="M989 125a11 11 0 0 1 22 0Z"/>
+          <path stroke="#c89b3c" stroke-width="2.5" d="M1000 115V100"/>
+          <path fill="#d8483b" d="M1001 100l12 4-12 4Z"/>
+          <g fill="#164a63"><rect x="996" y="162" width="8" height="12" rx="4"/><rect x="996" y="182" width="8" height="12" rx="4"/><rect x="997" y="130" width="6" height="9" rx="3"/></g>
+        </g>
+        <!-- sparkles -->
+        <g stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".35">
+          <path d="M520 256h26M1180 252h34M760 262h18M1300 266h22M90 260h20"/>
+        </g>
+        <!-- near waves -->
+        <path fill="#1b5f78" d="M0 262C140 250 260 272 400 260S660 248 800 262 1060 274 1200 262 1360 252 1440 260V300H0Z"/>
+        <path style="fill:var(--bg)" d="M0 284C160 274 300 292 460 282S760 272 920 284 1240 292 1440 280V300H0Z"/>
+      </svg>
+    </div>
+  </section>
 
-<h2>Privacy</h2>
-<p>Read our <a href="privacy.html">Privacy Policy</a>.</p>
-</div>
+  <section id="games" aria-labelledby="games-title">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our games</span>
+        <h2 id="games-title">Bosphorus Arcade</h2>
+        <p>Our first game: an open-sea adventure where every voyage brings a new story.</p>
+      </div>
+
+      <article class="card game">
+        <div class="game-art" aria-hidden="true">
+          <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMax meet">
+            <!-- compass rose -->
+            <g transform="translate(430 120)" stroke="#e2b85a" fill="none" opacity=".35">
+              <circle r="86" stroke-width="1.5"/><circle r="62" stroke-width="1" stroke-dasharray="3 6"/>
+              <path stroke-width="1.5" d="M0-100V100M-100 0H100"/>
+              <path fill="#e2b85a" stroke="none" d="M0-78 9-9 0 0-9-9ZM0 78-9 9 0 0 9 9Z" opacity=".9"/>
+              <path fill="#e2b85a" stroke="none" d="M-78 0-9-9 0 0-9 9ZM78 0 9 9 0 0 9-9Z" opacity=".5"/>
+            </g>
+            <!-- island -->
+            <path fill="#e8d9b0" d="M40 300c40-40 150-46 210-6Z"/>
+            <path fill="#4f9b5b" d="M70 296c20-34 120-40 160-8-60-12-110-8-160 8Z"/>
+            <path stroke="#5b3a20" stroke-width="5" stroke-linecap="round" d="M130 292c-2-30 4-52 14-70"/>
+            <path fill="#3f8a4c" d="M144 222c-26-4-44 8-50 22 18-12 34-14 50-10 4-16-8-28-30-34 18 2 34 12 42 22 10-14 30-18 46-12-18 2-30 10-34 22 18 2 32 12 36 26-14-12-32-16-46-12Z"/>
+            <!-- ship -->
+            <g transform="translate(250 166)">
+              <path fill="#5b3a20" d="M0 150h220l-26 34H24Z"/>
+              <path fill="#7a5130" d="M0 150h220l-5 7H5Z"/>
+              <g fill="#f3d27a"><circle cx="58" cy="166" r="5"/><circle cx="98" cy="166" r="5"/><circle cx="138" cy="166" r="5"/><circle cx="178" cy="166" r="5"/></g>
+              <path stroke="#3a2614" stroke-width="5" d="M80 152V0M146 152V26"/>
+              <path fill="#fbf6ea" d="M82 132V10c58 30 64 92 0 122Z"/>
+              <path fill="#fbf6ea" d="M148 132V36c46 26 50 72 0 96Z"/>
+              <path fill="#f1e6cf" d="M220 150 176 70 162 140Z"/>
+              <path fill="#d8483b" d="M80 0l26 8-26 8Z"/>
+              <path stroke="#c89b3c" stroke-width="2" fill="none" d="M84 56c14 4 22 14 24 26M150 70c10 4 16 12 18 20" opacity=".7"/>
+            </g>
+            <!-- waves -->
+            <path fill="#1e6f8c" d="M0 330c50-12 100 12 150 0s100-12 150 0 100 12 150 0 100-12 150 0v90H0Z"/>
+            <path fill="#165a73" d="M0 360c60-12 120 12 180 0s120-12 180 0 120 12 240 0v60H0Z"/>
+            <g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".35"><path d="M60 346h30M300 352h40M500 344h28"/></g>
+          </svg>
+        </div>
+        <div class="game-body">
+          <span class="badge">Coming soon to the App Store</span>
+          <h3>Bosphorus Arcade</h3>
+          <p>Take the helm of a small ship and sail the waters of the Bosphorus. Help sailors in trouble, chase
+            down pirates, haul treasure from forgotten wrecks and grow a humble boat into a proud fleet.</p>
+          <ul class="features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M5 13a7 7 0 0 0 14 0M8 10h8"/></svg>
+              <div><b>An open sea full of stories</b><span>Tow quests, rescues, fugitives, message bottles &mdash; every choice has a price.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg>
+              <div><b>Pirates, islands and conquest</b><span>Win sea battles, claim islands and build up your own region.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+              <div><b>Upgrade your ship</b><span>New cannons, more sails, bigger hulls &mdash; and wingmen who sail by your side.</span></div>
+            </li>
+          </ul>
+          <a class="btn btn-dark" href="#support">Ask us anything</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="support" aria-labelledby="support-title" style="padding-top:20px">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Support</span>
+        <h2 id="support-title">We're here to help</h2>
+        <p>Found a bug, stuck on a quest or have an idea for the game? Every message is read by the developer.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card tile">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+          <h3>Write to us</h3>
+          <p>We usually reply within a few days.</p>
+          <a class="mail" href="mailto:bilalemregirit@gmail.com?subject=Bosphorus%20Arcade">bilalemregirit@gmail.com</a>
+        </div>
+        <div class="card tile">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M9 15l2 2 4-4"/></svg></div>
+          <h3>Reporting a problem?</h3>
+          <p>Tell us your device model, iOS version and what happened just before the problem. A screenshot helps a lot.</p>
+          <a href="privacy.html">Read our privacy policy &rarr;</a>
+        </div>
+      </div>
+
+      <div class="card faq">
+        <details>
+          <summary>Does the game collect my personal data?</summary>
+          <p>No. Bosphorus Arcade has no accounts and no servers of its own; your settings stay on your device.
+            The only third party is Google AdMob, which shows optional ads &mdash; see the <a href="privacy.html">privacy policy</a>.</p>
+        </details>
+        <details>
+          <summary>Why are there ads?</summary>
+          <p>The game is free. Ads are always optional: you only see one when you choose to watch it for a reward,
+            such as an instant repair or a doubled treasure chest.</p>
+        </details>
+        <details>
+          <summary>Is there a mode for younger players?</summary>
+          <p>Yes. Turn on <b>Kid-friendly mode</b> in Settings &rsaquo; Language. Ads are then requested as suitable for
+            all ages and non-personalised, and the tracking permission is not asked.</p>
+        </details>
+        <details>
+          <summary>Which devices are supported?</summary>
+          <p>iPhone and iPad with iOS 15 or later.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div><span class="brand-name">Studio Scutari</span> &nbsp;&middot;&nbsp; &copy; 2026</div>
+    <div><a href="#games">Games</a><a href="#support">Support</a><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+</footer>
+
 </body>
 </html>

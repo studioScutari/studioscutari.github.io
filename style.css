@@ -124,6 +124,9 @@ h2 {
 }
 .badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--brass); }
 .game h3 { font-family: "Fraunces", Georgia, serif; font-size: 30px; margin: 0 0 10px; font-weight: 600; }
+.game-title { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.game-title h3 { margin: 0; line-height: 1.15; }
+.app-icon { width: 72px; height: 72px; border-radius: 17px; flex: none; box-shadow: 0 6px 18px -6px rgba(11, 42, 58, .45); }
 .game p { color: var(--ink-soft); margin: 0 0 20px; }
 .features { list-style: none; padding: 0; margin: 0 0 26px; display: grid; gap: 12px; }
 .features li { display: flex; gap: 12px; align-items: flex-start; }

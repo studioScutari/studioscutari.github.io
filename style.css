@@ -62,12 +62,8 @@ img, svg { display: block; max-width: 100%; }
 }
 .rule { display: block; width: 56px; height: 1px; background: var(--gold); border: 0; margin: 28px 0; }
 
-/* Logo mark swaps with the colour scheme */
-.mark-dark { display: none; }
-@media (prefers-color-scheme: dark) {
-  .mark-light { display: none; }
-  .mark-dark { display: block; }
-}
+/* Logo mark (inline SVG symbol, inherits text colour) */
+.mark { fill: currentColor; flex: none; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -80,7 +76,7 @@ img, svg { display: block; max-width: 100%; }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--ink); }
 .brand:hover { color: var(--ink); }
-.brand img { height: 40px; width: auto; }
+.brand .mark { width: 37px; height: 40px; }
 .wordmark { display: flex; flex-direction: column; line-height: 1; text-transform: uppercase; }
 .wordmark small { font-size: 9.5px; font-weight: 400; letter-spacing: .5em; margin-bottom: 6px; }
 .wordmark span { font-size: 17px; font-weight: 400; letter-spacing: .42em; }
@@ -110,7 +106,7 @@ img, svg { display: block; max-width: 100%; }
 /* ---------- Hero ---------- */
 .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
 .hero .wrap {
-  position: relative; z-index: 2; display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 48px;
+  position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 40px;
   min-height: min(760px, calc(100vh - 76px)); padding-top: 72px; padding-bottom: 150px;
 }
 .hero h1 {
@@ -119,10 +115,31 @@ img, svg { display: block; max-width: 100%; }
 }
 .hero h1 em { font-style: normal; font-weight: 400; color: var(--sea); }
 .hero .lead { font-size: clamp(17px, 1.6vw, 19px); font-weight: 300; color: var(--ink-soft); max-width: 520px; margin: 0 0 40px; }
-.hero-mark { justify-self: center; position: relative; }
-.hero-mark img { width: clamp(180px, 22vw, 290px); height: auto; }
+.hero-art { justify-self: end; width: min(100%, 600px); margin-right: -24px; position: relative; }
+.porthole { width: 100%; height: auto; overflow: visible; }
+.porthole text { font-family: var(--sans); }
+.pc-line { fill: none; stroke: var(--line-strong); stroke-width: 1; }
+.pc-horizon { stroke: var(--sea); opacity: .55; }
+.pc-tick { fill: none; stroke: var(--ink); stroke-width: 1; opacity: .45; }
+.pc-cardinal { fill: var(--gold); font-size: 13px; font-weight: 500; text-anchor: middle; dominant-baseline: central; letter-spacing: .1em; }
+.pc-gold-fill { fill: var(--gold); }
+.pc-orbit { transform-origin: 300px 300px; animation: pc-spin 120s linear infinite; }
+.pc-orbit text { fill: var(--label); font-size: 12.5px; font-weight: 500; letter-spacing: .3em; }
+.pc-far { fill: none; stroke: var(--sea); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+.pc-sea { fill: none; stroke: var(--sea); stroke-width: 1.2; stroke-linecap: round; }
+.pc-wave { animation: pc-drift var(--dur) linear infinite; }
+.pc-boat { transform-origin: 300px 422px; animation: pc-bob 7s ease-in-out infinite; }
+.pc-mark { fill: var(--ink); }
+.pc-reflect { opacity: .08; }
+.pc-par { transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
+@keyframes pc-spin { to { transform: rotate(360deg); } }
+@keyframes pc-drift { to { transform: translateX(calc(var(--wl) * -1)); } }
+@keyframes pc-bob {
+  0%, 100% { transform: translateY(0) rotate(-1.2deg); }
+  50% { transform: translateY(-5px) rotate(1.2deg); }
+}
 .coords {
-  margin-top: 26px; text-align: center; font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(--label);
+  margin-top: 8px; text-align: center; font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(--label);
 }
 .hero-waves { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; pointer-events: none; }
 .hero-waves svg { width: 100%; height: 140px; }
@@ -251,7 +268,7 @@ h2 {
 .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; padding-bottom: 64px; border-bottom: 1px solid var(--band-line); }
 .footer-brand { display: flex; align-items: center; gap: 18px; color: var(--band-ink); text-decoration: none; }
 .footer-brand:hover { color: var(--band-ink); }
-.footer-brand img { height: 64px; width: auto; }
+.footer-brand .mark { width: 59px; height: 64px; }
 .footer-brand .wordmark small { font-size: 10.5px; }
 .footer-brand .wordmark span { font-size: 21px; }
 .footer-col .label { color: var(--gold); margin-bottom: 18px; display: block; }
@@ -263,9 +280,7 @@ h2 {
 @media (max-width: 900px) {
   section { padding: 96px 0; }
   .hero .wrap { grid-template-columns: 1fr; min-height: 0; padding-top: 64px; padding-bottom: 130px; gap: 56px; }
-  .hero-mark { order: -1; justify-self: start; }
-  .hero-mark img { width: 120px; }
-  .coords { text-align: left; }
+  .hero-art { justify-self: center; width: min(100%, 440px); margin-right: 0; }
   .section-head, .faq-wrap { grid-template-columns: 1fr; gap: 20px; }
   .section-head { margin-bottom: 56px; }
   .faq-wrap { margin-top: 88px; }
@@ -281,7 +296,7 @@ h2 {
 @media (max-width: 600px) {
   .wrap { padding: 0 20px; }
   .site-header .wrap { height: 64px; }
-  .brand img { height: 32px; }
+  .brand .mark { width: 30px; height: 32px; }
   .wordmark small { font-size: 8px; letter-spacing: .44em; margin-bottom: 5px; }
   .wordmark span { font-size: 14px; letter-spacing: .36em; }
   .nav { gap: 18px; }
@@ -295,5 +310,5 @@ h2 {
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .badge::before { animation: none; }
+  .badge::before, .pc-orbit, .pc-wave, .pc-boat { animation: none; }
 }
